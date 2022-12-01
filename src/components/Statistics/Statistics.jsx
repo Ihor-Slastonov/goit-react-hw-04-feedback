@@ -1,24 +1,35 @@
 import PropTypes from 'prop-types';
+import { Label, Item, Stats, LabelText } from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
-    <ul>
-      <li>
-        <p>Good: {good}</p>
-      </li>
-      <li>
-        <p>Neutral: {neutral}</p>
-      </li>
-      <li>
-        <p>Bad: {bad}</p>
-      </li>
-      <li>
-        <p>Total: {total()}</p>
-      </li>
-      <li>
-        <p>Positive feddback: {positivePercentage()}%</p>
-      </li>
-    </ul>
+    <Stats>
+      <Item>
+        <Label>
+          Good: <LabelText>{good}</LabelText>
+        </Label>
+      </Item>
+      <Item>
+        <Label>
+          Neutral: <LabelText>{neutral}</LabelText>
+        </Label>
+      </Item>
+      <Item>
+        <Label>
+          Bad: <LabelText>{bad}</LabelText>
+        </Label>
+      </Item>
+      <Item>
+        <Label>
+          Total: <LabelText>{total()}</LabelText>
+        </Label>
+      </Item>
+      <Item>
+        <Label>
+          Positive feddback: <LabelText>{positivePercentage()}%</LabelText>
+        </Label>
+      </Item>
+    </Stats>
   );
 };
 

@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import { Notify } from './Notification.styled';
 
 export const Notification = ({ message }) => {
-  return <>{message && <p>{message}</p>}</>;
+  return <>{message && <Notify>{message}</Notify>}</>;
 };
 
 Notification.propTypes = {
-    message: PropTypes.string.isRequired,
-}
+  message: PropTypes.string.isRequired,
+};
