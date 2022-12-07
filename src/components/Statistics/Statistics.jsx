@@ -21,12 +21,12 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
       </Item>
       <Item>
         <Label>
-          Total: <LabelText>{total()}</LabelText>
+          Total: <LabelText>{total}</LabelText>
         </Label>
       </Item>
       <Item>
         <Label>
-          Positive feddback: <LabelText>{positivePercentage()}%</LabelText>
+          Positive feddback: <LabelText>{positivePercentage}%</LabelText>
         </Label>
       </Item>
     </Stats>
@@ -37,8 +37,8 @@ Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
-  total: PropTypes.func.isRequired,
-  positivePercentage: PropTypes.func.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
 
 export { Statistics };
